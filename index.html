@@ -1,118 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Piedra, papel o tijera</title>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rock Paper Scissors (spanish)</title>
+</head>
 </head>
 <body>
-  <script>
-
-    let puntaje = 0;
- 	
-    function computerPlay()
-   {
-     //Aqui jugara la maquina
-    //Debe realizarse una tirada aleatoria de 1 a 3. el resultado debe ser piedra, papel o tijera y retornarse.
-
-    let resultado = Math.floor(Math.random() * 3) +1;
-
-    if (resultado == 1) {
-            
-            return "piedra";
-    } else if (resultado == 2){
-
-        return "papel";
-    } else if (resultado == 3 ){
-
-        return "tijera";
-}
-}
-
-function playerPlay()
-   {
-     let seleccion = prompt("Ingrese piedra, papel o tijeras", "piedra, papel o tijera");
-     let conversion = seleccion.toLowerCase();
-
-        if (conversion == "piedra") {
-            
-            return "piedra";
-    } else if (conversion == "papel"){
-
-        return "papel";
-    } else if (conversion == "tijera" ){
-
-        return "tijera";
-} else {
-    alert("Introduce una opcion valida");
-
-}
-}
-
-
-
-    function logicajuego()
-   {
-
-    let decisionplayer = playerPlay();
-    let decisionpc = computerPlay();
-     
-//Empate
-        if (decisionplayer == decisionpc){
-            
-            alert("Empate");
-}
-
-// Piedra
-     if (decisionplayer == "piedra" && decisionpc == "papel"){
-            
-            alert("Pierdes, la computadora ha sacado papel");
-
-    } else if (decisionplayer == "piedra" && decisionpc == "tijera"){
-            
-            alert("Ganas, la computadora ha sacado tijera");
-               puntaje++;
-    }
-
-// Papel
-
-     if (decisionplayer == "papel" && decisionpc == "tijera"){
-            
-            alert("Pierdes, la computadora ha sacado tijera");
-
-    } else if (decisionplayer == "papel" && decisionpc == "piedra"){
-            
-            alert("Ganas, la computadora ha sacado piedra");
-                puntaje++;
-    }
-
-
-// Tijera
-
-    if (decisionplayer == "tijera" && decisionpc == "piedra"){
-            
-            alert("Pierdes, la computadora ha sacado piedra");
-    } else if (decisionplayer == "tijera" && decisionpc == "papel"){
-            
-            alert("Ganas, la computadora ha sacado papel");
-                puntaje++;
-    }
-    
-
-}
-
-    function ronda(){
-            
-            
-
-        while (puntaje < 5) {
-            
-              logicajuego()
-}
-    }
-
-
-ronda();
-
-
+  <script src="game.js">
   </script>
 </body>
 </html>
