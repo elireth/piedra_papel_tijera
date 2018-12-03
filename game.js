@@ -1,7 +1,7 @@
 
     let puntajeJugador = 0;
     let puntajeMaquina = 0;
-    let partida = 1;
+    let partida = 0;
  	
     function computerPlay()
    {
@@ -49,52 +49,15 @@ function playerPlay()
 
     let decisionplayer = playerPlay();
     let decisionpc = computerPlay();
-     
-//Empate
-        if (decisionplayer == decisionpc){
-            
-            alert("Empate " + "Ronda: " + partida);
-}
-
-// Piedra
-     if (decisionplayer == "piedra" && decisionpc == "papel"){
-            
-            alert("Pierdes, la computadora ha sacado papel " + "Ronda: " + partida);
-            puntajeMaquina++
-
-    } else if (decisionplayer == "piedra" && decisionpc == "tijera"){
-            
-            alert("Ganas, la computadora ha sacado tijera " + "Ronda: " + partida);
-              puntajeJugador++
-    }
-
-// Papel
-
-     if (decisionplayer == "papel" && decisionpc == "tijera"){
-            
-            alert("Pierdes, la computadora ha sacado tijera " + "Ronda: " + partida);
-            puntajeMaquina++
-
-    } else if (decisionplayer == "papel" && decisionpc == "piedra"){
-            
-            alert("Ganas, la computadora ha sacado piedra " + "Ronda: " + partida);
-           puntajeJugador++
-    }
-
-
-// Tijera
-
-    if (decisionplayer == "tijera" && decisionpc == "piedra"){
-            
-            alert("Pierdes, la computadora ha sacado piedra. " + "Ronda: " + partida);
-            puntajeMaquina++
-    } else if (decisionplayer == "tijera" && decisionpc == "papel"){
-            
-            alert("Ganas, la computadora ha sacado papel " + "Ronda: " + partida);
-             puntajeJugador++
-    }
     
-
+    
+    if (decisionplayer == "papel" && decisionpc == "tijera" || decisionplayer == "piedra" && decisionpc == "papel" || decisionplayer == "tijera" && decisionpc == "piedra"){
+        alert("Perdiste. Has usado: " + decisionplayer + " La computadora ha usado: " + decisionpc + " Ronda: " + partida);
+} else if (decisionplayer == "tijera" && decisionpc == "papel" || decisionplayer == "papel" && decisionpc == "piedra" || decisionplayer == "tpiedra" && decisionpc == "tijera"){   
+    alert("Ganaste. Has usado: " + decisionplayer + " La computadora ha usado: " + decisionpc + " Ronda: " + partida);
+} else if (decisionplayer == decisionpc){
+            alert("Empate, has usado: " + decisionplayer + " La computadora ha usado: " + decisionpc + " Ronda: " + partida);
+}
 }
 
     function final(){
@@ -112,15 +75,15 @@ function playerPlay()
     function ronda(){
             
             
-
-        while (partida < 5) {
+        if (partida == 5){
+            final();
+    } else
+        while (partida < 6) {
             
               logicajuego()
             partida++
 }
-        if (partida == 5){
-        final();
-}
+        
 }
 
 
