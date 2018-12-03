@@ -1,7 +1,7 @@
 
     let puntajeJugador = 0;
     let puntajeMaquina = 0;
-    let partida = 0;
+    let partida = 1;
  	
     function computerPlay()
    {
@@ -75,14 +75,14 @@ function playerPlay()
     function ronda(){
             
             
-        if (partida == 5){
-            final();
-    } else
-        while (partida < 6) {
+                while (partida < 6) {
             
               logicajuego()
             partida++
 }
+if (partida == 6){
+    final();
+} 
         
 }
 
