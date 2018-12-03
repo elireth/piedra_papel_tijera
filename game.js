@@ -1,7 +1,7 @@
 
     let puntajeJugador = 0;
     let puntajeMaquina = 0;
-    let partida = 0;
+    let partida = 1;
  	
     function computerPlay()
    {
@@ -53,18 +53,18 @@ function playerPlay()
 //Empate
         if (decisionplayer == decisionpc){
             
-            alert("Empate");
+            alert("Empate " + "Ronda: " + partida);
 }
 
 // Piedra
      if (decisionplayer == "piedra" && decisionpc == "papel"){
             
-            alert("Pierdes, la computadora ha sacado papel");
+            alert("Pierdes, la computadora ha sacado papel " + "Ronda: " + partida);
             puntajeMaquina++
 
     } else if (decisionplayer == "piedra" && decisionpc == "tijera"){
             
-            alert("Ganas, la computadora ha sacado tijera");
+            alert("Ganas, la computadora ha sacado tijera " + "Ronda: " + partida);
               puntajeJugador++
     }
 
@@ -72,12 +72,12 @@ function playerPlay()
 
      if (decisionplayer == "papel" && decisionpc == "tijera"){
             
-            alert("Pierdes, la computadora ha sacado tijera");
+            alert("Pierdes, la computadora ha sacado tijera " + "Ronda: " + partida);
             puntajeMaquina++
 
     } else if (decisionplayer == "papel" && decisionpc == "piedra"){
             
-            alert("Ganas, la computadora ha sacado piedra");
+            alert("Ganas, la computadora ha sacado piedra " + "Ronda: " + partida);
            puntajeJugador++
     }
 
@@ -86,11 +86,11 @@ function playerPlay()
 
     if (decisionplayer == "tijera" && decisionpc == "piedra"){
             
-            alert("Pierdes, la computadora ha sacado piedra");
+            alert("Pierdes, la computadora ha sacado piedra. " + "Ronda: " + partida);
             puntajeMaquina++
     } else if (decisionplayer == "tijera" && decisionpc == "papel"){
             
-            alert("Ganas, la computadora ha sacado papel");
+            alert("Ganas, la computadora ha sacado papel " + "Ronda: " + partida);
              puntajeJugador++
     }
     
