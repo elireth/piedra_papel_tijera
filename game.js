@@ -53,9 +53,11 @@ function playerPlay()
     
     if (decisionplayer == "papel" && decisionpc == "tijera" || decisionplayer == "piedra" && decisionpc == "papel" || decisionplayer == "tijera" && decisionpc == "piedra"){
         alert("Perdiste. Has usado: " + decisionplayer + " La computadora ha usado: " + decisionpc + " Ronda: " + partida);
-} else if (decisionplayer == "tijera" && decisionpc == "papel" || decisionplayer == "papel" && decisionpc == "piedra" || decisionplayer == "tpiedra" && decisionpc == "tijera"){   
-    alert("Ganaste. Has usado: " + decisionplayer + " La computadora ha usado: " + decisionpc + " Ronda: " + partida);
-} else if (decisionplayer == decisionpc){
+} 
+        else if (decisionplayer == "tijera" && decisionpc == "papel" || decisionplayer == "papel" && decisionpc == "piedra" || decisionplayer == "tpiedra" && decisionpc == "tijera"){   
+            alert("Ganaste. Has usado: " + decisionplayer + " La computadora ha usado: " + decisionpc + " Ronda: " + partida);
+} 
+        else if (decisionplayer == decisionpc){
             alert("Empate, has usado: " + decisionplayer + " La computadora ha usado: " + decisionpc + " Ronda: " + partida);
 }
 }
